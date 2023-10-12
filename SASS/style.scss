@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+}
+body{
+    background-color: black;
+}
+.container{
+    background-color: white;
+    width: 70px;
+    height: 90vh;
+    margin: 5vh 0px 5vh 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.menu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(./images/x.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 10px;
+}
+.menu button{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background-color: inherit;
+    border: none;
+}
+.separator{
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    background-color: black;
+    opacity: .5;
+}
+.container .items{
+    margin: 35px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.container .button{
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: white;
+    border-radius: 10%;
+}
+.container p{
+    font-weight: bold;
+    display: none;
+}
+.container .house{
+    background-image: url(./images/house.png);
+}
+.container .about{
+    background-image: url(./images/user.png);
+}
+.container .message{
+    background-image: url(./images/message.png);
+}
+.container .photos{
+    background-image: url(./images/photos.png);
+}
+.container .settings{
+    background-image: url(./images/settings.png);
+}
+
+.active_container{
+    width: 170px;
+    transition: width 1s ease-in-out;
+    .menu{
+        transform: rotate(90deg);
+    }
+    .active-paragraph{
+        display: flex;
+        width: 70px;
+    }
+}
+.active_container_2{
+    width: 80px;
+    transition: width 1s ease-in-out;
+    .menu{
+        transform: rotate(0deg);
+    }
+    .active-paragraph{
+        display: none;
+    }
+}
+
+.container{
+    .active_buttons{
+        transform: translateX(30px);
+        transition: all 1s ease-in-out;
+    }
+    .active_house{
+        background-color: orange;
+    }
+    .activeParagraph_house{
+        color: orange;
+    }
+    .active_about{
+        background-color: red;
+    }
+    .activeParagraph_about{
+        color: red;
+    }
+    .active_message{
+        background-color: green;
+    }
+    .activeParagraph_message{
+        color: green;
+    }
+    .active_photo{
+        background-color: blue;
+    }
+    .activeParagraph_photo{
+        color: blue;
+    }
+    .active_settings{
+        background-color: purple;
+    }
+    .activeParagraph_settings{
+        color: purple;
+    }
+}
+.active_buttons2{
+    transform: translateX(0px);
+    transition: transform 1s ease-in-out;
+}
